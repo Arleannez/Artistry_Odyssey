@@ -1,0 +1,124 @@
+/* Team image */
+body {
+  background-color: #dbe27a;
+}
+
+#VissionParagraph {
+  color: #dbe27a;
+}
+
+p {
+  color: #8a0000;
+}
+
+.Team {
+  border-radius: 5px;
+  background-color: #590031;
+  padding: 10px 0;
+}
+
+.Team .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.Team h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #eabc64;
+  margin-bottom: 20px;
+}
+
+.Team p {
+  font-size: 18px;
+  color: #8a0000;
+  margin-bottom: 40px;
+}
+
+.Team .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.Team .grid > div {
+  background-color: #eabc64;
+  padding: 20px;
+  border: 1px solid #dbe27a;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start slightly below */
+  animation: fadeInUp 0.5s forwards; /* Apply fade-in animation */
+}
+
+.Team .grid > div:nth-child(1) { animation-delay: 0.1s; }
+.Team .grid > div:nth-child(2) { animation-delay: 0.2s; }
+.Team .grid > div:nth-child(3) { animation-delay: 0.3s; }
+.Team .grid > div:nth-child(4) { animation-delay: 0.4s; }
+.Team .grid > div:nth-child(5) { animation-delay: 0.5s; }
+.Team .grid > div:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.Team img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.Team h4 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4d1919;
+  margin-bottom: 10px;
+}
+
+.Team span {
+  font-size: 18px;
+  color: #8a0000;
+}
+
+/* Hover effect for team member cards */
+.Team .grid > div:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Increase shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+@media (max-width: 768px) {
+  .Team .grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .Team .grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Button Styles */
+input[type="button"] {
+  background-color: #eabc64; /* Use the same background color as the team section */
+  color: #8a0000; /* Use a dark color for the text */
+  font-size: 18px; /* Set font size */
+  padding: 10px 20px; /* Add padding for better appearance */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and scale */
+}
+
+input[type="button"]:hover {
+  background-color: #590031; /* Change background color on hover */
+  color: #eabc64; /* Change text color on hover */
+  transform: scale(1.05); /* Scale up on hover */
+}
